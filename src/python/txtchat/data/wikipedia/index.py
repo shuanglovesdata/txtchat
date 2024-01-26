@@ -33,7 +33,7 @@ class Reader(ReaderBase):
         try:
             wiki = load_dataset(args.dataset, split="train")
         except:
-            wiki = load_from_disk(args.dataset, split="train")
+            wiki = load_from_disk(args.dataset)
 
         # Get percentile rankings
         rank = self.rankings(args.pageviews)
