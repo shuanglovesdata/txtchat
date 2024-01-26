@@ -8,7 +8,7 @@ import re
 import sqlite3
 
 from nltk import sent_tokenize
-from datasets import load_dataset
+from datasets import load_dataset, load_from_disk
 
 from ..base import Index as IndexBase
 from ..base import Reader as ReaderBase
