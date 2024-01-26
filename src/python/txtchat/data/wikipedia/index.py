@@ -30,7 +30,10 @@ class Reader(ReaderBase):
         """
 
         # Load the raw dataset
-        wiki = load_dataset(args.dataset, split="train")
+        try:
+            wiki = load_dataset(args.dataset, split="train")
+        except:
+            wiki = load_from_disk(args.dataset, split="train")
 
         # Get percentile rankings
         rank = self.rankings(args.pageviews)
